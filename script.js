@@ -1,3 +1,14 @@
+const resultDiv = document.querySelector("#display");
+const p = document.createElement("p");
+
+const clearButton = document.querySelector(".clear");
+const equalsButton = document.querySelector(".equals");
+
+// select all inputs
+const inputs = document.querySelectorAll(".number");
+
+const operatorValue = document.querySelectorAll(".function");
+
 function operate(num1, operator, num2) {
   let result;
   if (operator === "+") {

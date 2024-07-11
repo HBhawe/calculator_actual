@@ -34,7 +34,9 @@ body,
 }
 
 .number,
-.function {
+.function,
+.clear,
+.equals {
   width: var(--width);
   height: var(--height);
   border-radius: 50%;
