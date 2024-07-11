@@ -28,16 +28,27 @@ inputArray.forEach(function (currentBtn) {
   currentBtn.addEventListener("click", getValue);
 });
 
-var number1, number2, operator;
+var operationObject = new Object();
+
+var number1, number2, operator, test;
 
 function getValue(e) {
-  console.log(e.target.textContent);
-  console.log(e.target.classList);
-  //   if (number1 === undefined) {
-  //     number1 = e.target.textContent;
-  //   } else if (operator) {
-
-  //   }
+  if (e.target.classList.contains("number")) {
+    if (number1 === undefined) {
+      number1 = e.target.textContent;
+      p.innerText = number1;
+      operationObject.number1 = number1;
+    } else {
+      number2 = e.target.textContent;
+      p.innerText = number2;
+      operationObject.number2 = number2;
+    }
+    resultDiv.appendChild(p);
+  } else if (e.target.classList.contains("function")) {
+    operator = e.target.textContent;
+    operationObject.operator = operator;
+  }
+  console.log(operationObject);
 }
 
 function operate(num1, operator, num2) {
@@ -69,6 +80,6 @@ function multiply(num1, num2) {
 
 function divide(num1, num2) {
   if (num1 === 0 || num2 === 0) {
-    return "Don't be naughty trying to divide by 0";
+    return "Not a number";
   } else return num1 / num2;
 }

@@ -26,8 +26,9 @@ body,
   font-family: "Courier New", Courier, monospace;
   font-size: xx-large;
   color: antiquewhite;
-  text-align: right;
   display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 #display,
@@ -66,8 +67,7 @@ button {
 
 p {
   margin: 0;
-  padding: 0;
-  align-self: flex-end;
+  padding: 5px;
 }
 
 .function,
