@@ -1,3 +1,4 @@
+// selector to display the result in a "p" element
 const resultDiv = document.querySelector("#display");
 const p = document.createElement("p");
 
@@ -27,11 +28,17 @@ inputArray.forEach(function (currentBtn) {
   currentBtn.addEventListener("click", getValue);
 });
 
+var number1, number2, operator;
+
 function getValue(e) {
   console.log(e.target.textContent);
-}
+  console.log(e.target.classList);
+  //   if (number1 === undefined) {
+  //     number1 = e.target.textContent;
+  //   } else if (operator) {
 
-const operatorValue = document.querySelectorAll(".function");
+  //   }
+}
 
 function operate(num1, operator, num2) {
   let result;
