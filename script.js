@@ -41,11 +41,11 @@ function getValue(e) {
   if (e.target.classList.contains("number")) {
     if (number1 === undefined || operator === undefined) {
       number1 = e.target.textContent;
-      p.innerText = number1;
       if (operationObject.number1 === undefined) {
         operationObject.number1 = "";
       }
       operationObject.number1 = "" + operationObject.number1 + number1;
+      p.innerText = operationObject.number1;
     } else if (number2 === undefined) {
       number2 = e.target.textContent;
       p.innerText = number2;
