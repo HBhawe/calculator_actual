@@ -48,19 +48,19 @@ function getValue(e) {
       p.innerText = operationObject.number1;
     } else if (number2 === undefined) {
       number2 = e.target.textContent;
-      p.innerText = number2;
+      p.innerText = p.innerText + number2;
       if (operationObject.number2 === undefined) {
         operationObject.number2 = "";
       }
       operationObject.number2 = operationObject.number2 + number2;
-      // operationObject.number2 = number2;
     }
     resultDiv.appendChild(p);
   } else if (e.target.classList.contains("function")) {
     operator = e.target.textContent;
     operationObject.operator = operator;
+    p.innerText = p.innerText + operator;
   }
-  console.log(operationObject);
+  // console.log(operationObject);
 }
 
 function operate(num1, operator, num2) {
